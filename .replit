@@ -1,1 +1,3 @@
 language = "java10"
+
+run = "javac -d bin src/Categories/*.java; java -classpath bin OnlineRetailer.Main"
