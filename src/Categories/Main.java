@@ -27,8 +27,6 @@ public class Main {
     ArrayList<Food> purchasedFood = new ArrayList<Food>();
     ArrayList<Electronics> purchasedElectronics = new ArrayList<Electronics>();
 
-
-
    String Category = "";
    String Games = "1";
    String Electronics = "2";
@@ -52,15 +50,15 @@ public class Main {
 
      if(Category.equals("1")) {
 
-        purchasedGames.addGames(minecraft);
+        purchasedGames.add(minecraft);
 
        } else if (Category.equals("2")) {
 
-        purchasedGames.addGames(overwatch);
+        purchasedGames.add(overwatch);
 
        } else if (Category.equals("3")) {
        
-        purchasedGames.addGames(theForest);
+        purchasedGames.add(theForest);
        }
        
        } else if (Category.equals("2")) { 
@@ -72,15 +70,15 @@ public class Main {
 
        if(Category.equals("1")) {
 
-        purchasedElectronics.addelectronic(ps5);
+        purchasedElectronics.add(ps5);
 
        } else if (Category.equals("2")) {
 
-        purchasedElectronics.addelectronic(laptop);
+        purchasedElectronics.add(laptop);
 
        } else if (Category.equals("3")) {
        
-        purchasedElectronics.addelectronic(tv);
+        purchasedElectronics.add(tv);
        }
 
        } else if (Category.equals("3")) {
@@ -91,18 +89,29 @@ public class Main {
           Food = key.readLine();
       if(Category.equals("1")) {
 
-        purchasedFood.addfood(pizza);
+        purchasedFood.add(pizza);
 
        } else if (Category.equals("2")) {
 
-        purchasedFood.addfood(iceCream);
+        purchasedFood.add(iceCream);
 
        } else if (Category.equals("3")) {
        
-        purchasedFood.addfood(bacon);
+        purchasedFood.add(bacon);
        }
- 
      }
+    }
+    for (int i = 0; i < purchasedGames.size(); i++){
+        System.out.print(purchasedGames.get(i).getGameName()+" $");
+        System.out.println(purchasedGames.get(i).getPrice());   
+    }
+    for (int i = 0; i < purchasedFood.size(); i++){
+        System.out.print(purchasedFood.get(i).getFoodName()+" $");
+        System.out.println(purchasedFood.get(i).getPrice());   
+    }
+    for (int i = 0; i < purchasedElectronics.size(); i++){
+        System.out.print(purchasedElectronics.get(i).getElectronicName()+" $");
+        System.out.println(purchasedElectronics.get(i).getPrice());   
     }
  }
 }

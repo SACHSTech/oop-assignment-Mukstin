@@ -14,7 +14,7 @@ public class Electronics{
  }
 
 public String getElectronicName(){
-  return this.gameName;
+  return this.electronicName;
 }
 
 public double getPrice(){

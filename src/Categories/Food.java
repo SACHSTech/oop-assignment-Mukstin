@@ -8,8 +8,8 @@ public class Food{
  private double price;
 
  public Food(String theFoodName,double theprice){
-   this.foodName = thefoodName;
-   this.priceName = theprice;
+   this.foodName = theFoodName;
+   this.price = theprice;
  }
 
 public String getFoodName(){
