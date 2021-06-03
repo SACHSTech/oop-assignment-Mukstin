@@ -69,7 +69,7 @@ public class Main {
           System.out.println("2. laptop - $899");
           System.out.println("3. tv - $1398");
           System.out.println("Enter 1, 2, or 3 to choose an item");
-          Electronics = key.readLine();
+          Category = key.readLine();
 
        if(Category.equals("1")) {
 
@@ -89,7 +89,7 @@ public class Main {
           System.out.println("2. iceCream - $4");
           System.out.println("3. bacon - $4.47");
           System.out.println("Enter 1, 2, or 3 to choose an item");
-          Food = key.readLine();
+          Category = key.readLine();
       if(Category.equals("1")) {
 
         purchasedFood.add(pizza);
