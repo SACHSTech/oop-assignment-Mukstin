@@ -1,7 +1,7 @@
 package OnlineRetailer;
  
 import java.io.*;
- 
+import java.util.ArrayList;
 /**
 - Main file that runs the system.
 @Justin Ho Shue
@@ -12,10 +12,22 @@ public class Main {
  public static void main(String[] args) throws IOException{
     
    BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
- 
-  Games games = new Games();
-  Electronics electronics = new Electronics();
-  Food food = new Food();
+
+    Games minecraft = new Games("Minecraft", 35);
+    Games overwatch = new Games("overwatch", 20);
+    Games theForest = new Games("theForest", 15);
+    Food pizza = new Food("pizza", 15);
+    Food iceCream = new Food("iceCream", 4);
+    Food bacon = new Food("bacon", 4.47);
+    Electronics ps5 = new Electronics("ps5", 399);
+    Electronics laptop = new Electronics("laptop", 899);
+    Electronics tv = new Electronics("tv", 1398);
+
+    ArrayList<Games> purchasedGames = new ArrayList<Games>();
+    ArrayList<Food> purchasedFood = new ArrayList<Food>();
+    ArrayList<Electronics> purchasedElectronics = new ArrayList<Electronics>();
+
+
 
    String Category = "";
    String Games = "1";
@@ -32,19 +44,65 @@ public class Main {
      Category = key.readLine();
  
      if(Category.equals("1")) {
+        System.out.println("1. Minecraft - $35");
+        System.out.println("2. Overwatch - $20");
+        System.out.println("3. TheForest - $15");
+        System.out.println("Enter 1, 2, or 3 to choose an item");
+        Category = key.readLine();
 
-       System.out.println(games.GameString());
+     if(Category.equals("1")) {
 
-     } else if (Category.equals("2")) {
+        purchasedGames.addGames(minecraft);
 
-       System.out.println(electronics.ElectronicString());
+       } else if (Category.equals("2")) {
 
-     } else if (Category.equals("3")) {
+        purchasedGames.addGames(overwatch);
 
-       System.out.println(food.FoodString());
+       } else if (Category.equals("3")) {
+       
+        purchasedGames.addGames(theForest);
+       }
+       
+       } else if (Category.equals("2")) { 
+          System.out.println("1. ps5 - $399");
+          System.out.println("2. laptop - $899");
+          System.out.println("3. tv - $1398");
+          System.out.println("Enter 1, 2, or 3 to choose an item");
+          Electronics = key.readLine();
+
+       if(Category.equals("1")) {
+
+        purchasedElectronics.addelectronic(ps5);
+
+       } else if (Category.equals("2")) {
+
+        purchasedElectronics.addelectronic(laptop);
+
+       } else if (Category.equals("3")) {
+       
+        purchasedElectronics.addelectronic(tv);
+       }
+
+       } else if (Category.equals("3")) {
+          System.out.println("1. pizza - $15");
+          System.out.println("2. iceCream - $4");
+          System.out.println("3. bacon - $4.47");
+          System.out.println("Enter 1, 2, or 3 to choose an item");
+          Food = key.readLine();
+      if(Category.equals("1")) {
+
+        purchasedFood.addfood(pizza);
+
+       } else if (Category.equals("2")) {
+
+        purchasedFood.addfood(iceCream);
+
+       } else if (Category.equals("3")) {
+       
+        purchasedFood.addfood(bacon);
+       }
+ 
      }
- }
-
-      
+    }
  }
 }

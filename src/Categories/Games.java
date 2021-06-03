@@ -1,15 +1,34 @@
 package OnlineRetailer;
 import java.io.*;
+import java.util.ArrayList;
 public class Games{
- 
+
+ private String gameName; 
+  
+ private double price;
+
+ public Games(String theGameName,double theprice){
+   this.gameName = theGameName;
+   this.price = theprice;
+ }
+
+public String getGameName(){
+  return this.gameName;
+}
+
+public double getPrice(){
+  return this.price;
+}
+
+/*
  public static String GameString()throws IOException{
  
    BufferedReader key = new BufferedReader(new InputStreamReader(System.in));
  
    String Games = "";
-   String Minecraft = "1";
-   String Overwatch = "2";
-   String TheForest = "3";
+   String minecraft = "1";
+   String overwatch = "2";
+   String theForest = "3";
   
      System.out.println("1. Minecraft - $35");
      System.out.println("2. Overwatch - $20");
@@ -19,4 +38,5 @@ public class Games{
  
      return Games;
  }
+*/
 }

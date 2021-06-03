@@ -1,5 +1,27 @@
 package OnlineRetailer;
 import java.io.*;
+import java.util.ArrayList;
+public class Food{
+
+ private String foodName; 
+  
+ private double price;
+
+ public Food(String theFoodName,double theprice){
+   this.foodName = thefoodName;
+   this.priceName = theprice;
+ }
+
+public String getFoodName(){
+  return this.foodName;
+}
+
+public double getPrice(){
+  return this.price;
+}
+
+
+/*
 public class Food{
   public static String FoodString()throws IOException{
  
@@ -18,4 +40,5 @@ public class Food{
    
      return Food;
 }
+*/
 }

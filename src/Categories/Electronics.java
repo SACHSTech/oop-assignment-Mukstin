@@ -1,5 +1,29 @@
 package OnlineRetailer;
 import java.io.*;
+import java.util.ArrayList;
+
+public class Electronics{
+
+ private String electronicName; 
+  
+ private double price;
+
+ public Electronics(String theElectronicName,double theprice){
+   this.electronicName = theElectronicName;
+   this.price = theprice;
+ }
+
+public String getElectronicName(){
+  return this.gameName;
+}
+
+public double getPrice(){
+  return this.price;
+}
+
+
+
+/*
 public class Electronics{
  
  public static String ElectronicString() throws IOException{
@@ -19,4 +43,5 @@ public class Electronics{
  
      return Electronics;
  }
+ */
 }
