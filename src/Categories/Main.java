@@ -31,7 +31,10 @@ public class Main {
    String Games = "1";
    String Electronics = "2";
    String Food = "3";
- 
+   double subTotal = 0;
+   double total;
+   double tax;
+
    System.out.println("Welcome to the OnlineRetailer");
     while(!Category.equalsIgnoreCase("Done")){
      System.out.println("how may we help you?");
@@ -104,14 +107,24 @@ public class Main {
     for (int i = 0; i < purchasedGames.size(); i++){
         System.out.print(purchasedGames.get(i).getGameName()+" $");
         System.out.println(purchasedGames.get(i).getPrice());   
+        subTotal += purchasedGames.get(i).getPrice(); 
     }
     for (int i = 0; i < purchasedFood.size(); i++){
         System.out.print(purchasedFood.get(i).getFoodName()+" $");
-        System.out.println(purchasedFood.get(i).getPrice());   
+        System.out.println(purchasedFood.get(i).getPrice()); 
+        subTotal += purchasedFood.get(i).getPrice();   
     }
     for (int i = 0; i < purchasedElectronics.size(); i++){
         System.out.print(purchasedElectronics.get(i).getElectronicName()+" $");
-        System.out.println(purchasedElectronics.get(i).getPrice());   
+        System.out.println(purchasedElectronics.get(i).getPrice());  
+        subTotal += purchasedElectronics.get(i).getPrice();  
     }
+      //calculates the tax and the total
+      tax = subTotal*0.13;
+      total = subTotal + tax;
+      //prints the subtotal,tax,total
+      System.out.println("Subtotal: "+subTotal);
+      System.out.println("Tax: "+tax);
+      System.out.println("Total: "+total);
  }
 }
